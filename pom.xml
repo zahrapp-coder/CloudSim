@@ -22,7 +22,11 @@
     </repositories>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.cloudsimplus</groupId>
+            <artifactId>cloudsim-plus</artifactId>
+            <version>7.3.0</version>
+        </dependency>
     </dependencies>
 
 </project>
