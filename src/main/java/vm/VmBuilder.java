@@ -9,19 +9,14 @@ import java.util.List;
 
 public class VmBuilder {
 
-    public List<Vm> createMyVms(int numberOfVms) {
+    public List<Vm> createMyVms(int numberOfVms, long mips, int pesNumber, int ram, long bw, long size) {
         List<Vm> vmList = new ArrayList<>();
-
-        int mips = 1000;
-        int pesNumber = 1;
-
         for (int i = 0; i < numberOfVms; i++) {
-            // In CloudSim Plus, we use VmSimple
             Vm vm = new VmSimple(mips, pesNumber);
-            vm.setRam(512).setBw(1000).setSize(10000);
+            vm.setRam(ram).setBw(bw).setSize(size);
             vmList.add(vm);
         }
-
         return vmList;
     }
+
 }
